@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p v-show="showContent">点击组件4按钮展示或隐藏</p>
+    <button @click="clickButtonHandler">点击</button>
   </div>
 </template>
 
@@ -9,20 +9,12 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String,
+    msg: String
   },
-  data() {
-    return {
-      showContent: false
-    }
-  },
-  computed: {
-
-  },
-  mounted() {
-      this.$EventBus.$on('click-btn', () => {
-          this.showContent = !this.showContent;
-      })
+  methods: {
+      clickButtonHandler() {
+          this.$EventBus.$emit('click-btn');
+      }
   }
 }
 </script>

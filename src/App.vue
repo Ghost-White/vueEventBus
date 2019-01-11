@@ -9,6 +9,8 @@
       <p>通过event bus实现兄弟组件通信：</p>
       <component3 msg="组件3"></component3>
       <component4 msg="组件4"></component4>
+      <component5 msg="组件5"></component5>
+      <component6 msg="组件6"></component6>
     </div>
   </div>
 </template>
@@ -18,8 +20,8 @@ import component1 from './components/component1.vue';
 import component2 from './components/component2.vue';
 import component3 from './components/component3.vue';
 import component4 from './components/component4.vue';
-
-
+import component5 from './components/component5.vue';
+import component6 from './components/component6.vue';
 
 export default {
   name: 'app',
@@ -27,7 +29,9 @@ export default {
     component1,
     component2,
     component3,
-    component4
+    component4,
+    component5,
+    component6
   },
   data() {
     return {
